@@ -1,9 +1,6 @@
 package htw.berlin.webtech.teambackend.web.api;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -13,6 +10,8 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String tactic;
     private String formation;
+
+    @ElementCollection
     private List<String> players;
 
     public Team(String tactic, String formation, List<String> players) {

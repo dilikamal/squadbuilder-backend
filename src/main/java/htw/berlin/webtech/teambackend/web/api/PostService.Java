@@ -2,7 +2,6 @@ package htw.berlin.webtech.teambackend.web.api;
 
 
 import htw.berlin.webtech.teambackend.web.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -10,8 +9,12 @@ import java.util.Optional;
 @Service
 public class PostService {
 
-    @Autowired
+    final
     PostRepository repo;
+
+    public PostService(PostRepository repo) {
+        this.repo = repo;
+    }
 
     public Post addPost (final Post post){
         return repo.save(post);

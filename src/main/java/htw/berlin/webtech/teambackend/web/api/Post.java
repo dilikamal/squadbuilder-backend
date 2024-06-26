@@ -18,6 +18,10 @@ public class Post {
         this.content = content;
     }
 
+    public Post() {
+
+    }
+
     public Long getId() {
         return id;
     }
