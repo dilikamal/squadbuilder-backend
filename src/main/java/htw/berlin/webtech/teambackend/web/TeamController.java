@@ -15,9 +15,9 @@ public class TeamController {
     Logger logger = LoggerFactory.getLogger(TeamController.class);
 
     @CrossOrigin
-    @PostMapping("/teams")
-    public Team createTeams(@RequestBody Team team) {
-        return service.save(team);
+    @GetMapping("/teams")
+    public String index(){
+        return "Hello World!";
     }
 
     @CrossOrigin
