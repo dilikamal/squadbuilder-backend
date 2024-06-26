@@ -7,26 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/teams")
 public class TeamController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(TeamController.class);
+
     @Autowired
-    TeamService service;
+    TeamService teamService;
 
-    Logger logger = LoggerFactory.getLogger(TeamController.class);
-
-    @CrossOrigin
-    @GetMapping("/teams")
-    public String index(){
-        return "Hello World!";
+    @PostMapping
+    public Team createTeam(@RequestBody Team team) {
+        LOGGER.info("Creating team with tactic: {}, formation: {}, players: {}", team.getTactic(), team.getFormation(), team.getPlayers());
+        return teamService.save(team);
     }
 
-    @CrossOrigin
-    @GetMapping("/teams/{id}")
-    public Team getTeam(@PathVariable String id) {
-        logger.info("GET request on route teams with {}", id);
-        Long teamId = Long.parseLong(id);
-        return service.get(teamId);
+    @GetMapping("/{id}")
+    public Team getTeam(@PathVariable Long id) {
+        LOGGER.info("Getting team with id: {}", id);
+        return teamService.get(id);
     }
 
-
+    @GetMapping
+    public Iterable<Team> getAllTeams() {
+        LOGGER.info("Getting all teams");
+        return teamService.getAllTeams();
+    }
 }
