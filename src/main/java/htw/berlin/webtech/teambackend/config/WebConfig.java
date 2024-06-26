@@ -16,7 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedMethods("*")
                 .allowedOrigins(
                         "http://localhost:8080",
-                        "https://dnlhng-frontend.onrender.com"
+                        "https://webtech-frontend-squadbuilder.onrender.com"
                 );
     }
 }
