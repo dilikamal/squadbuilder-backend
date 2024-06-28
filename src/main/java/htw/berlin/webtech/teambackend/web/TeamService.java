@@ -11,7 +11,7 @@ import java.util.List;
 public class TeamService {
 
     @Autowired
-    TeamRepository repo;
+    static TeamRepository repo;
 
     public static Team save(Team team) {
         return repo.save(team);
