@@ -13,7 +13,7 @@ public class TeamService {
     @Autowired
     TeamRepository repo;
 
-    public Team save(Team team) {
+    public static Team save(Team team) {
         return repo.save(team);
     }
 
@@ -21,11 +21,13 @@ public class TeamService {
         return repo.findById(id).orElseThrow(RuntimeException::new);
     }
 
-
-    public List<Team> getAllTeams() {
+    public static List<Team> getAllTeams() {
         List<Team> teams = new ArrayList<>();
         repo.findAll().forEach(teams::add);
         return teams;
     }
 
+    public void deleteTeam(Long id) {
+        repo.deleteById(id);
+    }
 }
