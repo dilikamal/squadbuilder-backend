@@ -1,5 +1,6 @@
 package htw.berlin.webtech.teambackend.web;
 
+import ch.qos.logback.core.model.Model;
 import htw.berlin.webtech.teambackend.web.TeamService;
 import htw.berlin.webtech.teambackend.web.api.Team;
 import org.slf4j.Logger;
@@ -10,15 +11,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-public class TeamController{
+@Controller
+public class TeamController {
 
-    @Autowired
-    private TeamService teamService;
+    private final TeamService teamService;
+
+    public TeamController(TeamService teamService) {
+        this.teamService = teamService;
+    }
+
 
     @GetMapping("/teams")
     public List<Team> getTeams() {
-        return TeamService.getAllTeams();
+        return teamService.getAllTeams();
     }
 
     @PostMapping("/team-oa")
