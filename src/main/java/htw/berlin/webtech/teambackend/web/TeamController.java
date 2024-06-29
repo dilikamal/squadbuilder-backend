@@ -23,7 +23,7 @@ public class TeamController {
 
     @GetMapping("/teams")
     public List<Team> getTeams() {
-        return teamService.getAllTeams();
+        return TeamService.getAllTeams();
     }
 
     @PostMapping("/team-oa")
