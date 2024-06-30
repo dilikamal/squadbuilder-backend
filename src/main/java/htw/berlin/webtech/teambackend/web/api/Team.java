@@ -18,7 +18,7 @@ public class Team {
     private String tactic;
     private String formation;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> players;
 
     public Team(String tactic, String formation, List<String> players) {
