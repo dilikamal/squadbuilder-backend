@@ -8,6 +8,7 @@ class ThingBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

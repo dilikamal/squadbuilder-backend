@@ -1,1 +1,3 @@
 # squadbuilder-backend
+
+Diese Applikation ermöglicht einem Fussballcoach eine Mannschaft zu erstellen und zu verwalten. Die Applikation besteht aus einem Frontend und einem Backend. Das Frontend ist in Vue.js geschrieben und das Backend in Node.js. Das Frontend kommuniziert mit dem Backend über eine REST API. Eine Mannschaft besteht aus einem Namen und einer Liste von Spielern. Ein Spieler besteht aus einem Namen, einer Position und einer Nummer. Die Applikation ermöglicht es, eine Mannschaft zu erstellen, zu bearbeiten und zu löschen. Die Spieler einer Mannschaft können ebenfalls erstellt, bearbeitet und gelöscht werden.
