@@ -10,18 +10,22 @@ import java.util.List;
 @Service
 public class TeamService {
 
-    @Autowired
-    static TeamRepository repo;
+    private final TeamRepository repo;
 
-    public static Team save(Team team) {
+    @Autowired
+    public TeamService(TeamRepository repo) {
+        this.repo = repo;
+    }
+
+    public Team save(Team team) {
         return repo.save(team);
     }
 
     public Team get(Long id) {
-        return repo.findById(id).orElseThrow(RuntimeException::new);
+        return repo.findById(id).orElseThrow(() -> new RuntimeException("Team not found with id: " + id));
     }
 
-    public static List<Team> getAllTeams() {
+    public List<Team> getAllTeams() {
         List<Team> teams = new ArrayList<>();
         repo.findAll().forEach(teams::add);
         return teams;
