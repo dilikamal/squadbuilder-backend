@@ -15,7 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedMethods("*")
                 .allowedOrigins(
-                        "http://localhost:8080",
+                        "http://localhost:5173",
                         "https://webtech-frontend-squadbuilder.onrender.com"
                 );
     }
