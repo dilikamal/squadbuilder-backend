@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/teams")
 public class TeamController {
 
     private final TeamService teamService;
@@ -18,7 +17,7 @@ public class TeamController {
         this.teamService = teamService;
     }
 
-    @GetMapping
+    @GetMapping("/teams")
     public ResponseEntity<List<Team>> getTeams() {
         try {
             List<Team> teams = teamService.getAllTeams();
@@ -28,7 +27,7 @@ public class TeamController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/teams-oa")
     public ResponseEntity<Team> saveTeam(@RequestBody Team team) {
         try {
             Team savedTeam = teamService.save(team);
@@ -38,7 +37,7 @@ public class TeamController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("teams/{id}")
     public ResponseEntity<Void> deleteTeam(@PathVariable Long id) {
         try {
             teamService.deleteTeam(id);
