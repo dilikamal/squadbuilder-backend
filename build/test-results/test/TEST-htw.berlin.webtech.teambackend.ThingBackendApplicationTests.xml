@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="htw.berlin.webtech.teambackend.ThingBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-30T10:59:56" hostname="MacBook-Pro-4.local" time="0.264">
+  <properties/>
+  <testcase name="contextLoads()" classname="htw.berlin.webtech.teambackend.ThingBackendApplicationTests" time="0.264"/>
+  <system-out><![CDATA[12:59:55.077 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.berlin.webtech.teambackend.ThingBackendApplicationTests]: ThingBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:59:55.108 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.berlin.webtech.teambackend.WebtechApplication for test class htw.berlin.webtech.teambackend.ThingBackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2024-06-30T12:59:55.217+02:00  INFO 40531 --- [    Test worker] h.b.w.t.ThingBackendApplicationTests     : Starting ThingBackendApplicationTests using Java 21.0.1 with PID 40531 (started by zhaw in /Users/zhaw/Desktop/squadbuilder-backend)
+2024-06-30T12:59:55.218+02:00  INFO 40531 --- [    Test worker] h.b.w.t.ThingBackendApplicationTests     : The following 1 profile is active: "test"
+2024-06-30T12:59:55.401+02:00  INFO 40531 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-30T12:59:55.416+02:00  INFO 40531 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2024-06-30T12:59:55.536+02:00  INFO 40531 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-30T12:59:55.604+02:00  INFO 40531 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=SA
+2024-06-30T12:59:55.605+02:00  INFO 40531 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-30T12:59:55.621+02:00  INFO 40531 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-30T12:59:55.636+02:00  INFO 40531 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-06-30T12:59:55.646+02:00  INFO 40531 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-30T12:59:55.711+02:00  INFO 40531 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-30T12:59:55.984+02:00  INFO 40531 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-30T12:59:55.998+02:00  INFO 40531 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30T12:59:56.065+02:00  WARN 40531 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-30T12:59:56.229+02:00  INFO 40531 --- [    Test worker] h.b.w.t.ThingBackendApplicationTests     : Started ThingBackendApplicationTests in 1.08 seconds (process running for 1.446)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/zhaw/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
