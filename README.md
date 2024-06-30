@@ -1,1 +1,0 @@
-# squadbuilder-backend
